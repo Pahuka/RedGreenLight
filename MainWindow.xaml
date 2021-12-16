@@ -1,0 +1,19 @@
+﻿<Window x:Class="RedGreenLight.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Red Light Green Light" Height="450" Width="320" MaxWidth="320" MaxHeight="450" WindowStartupLocation="CenterScreen" MinWidth="320" MinHeight="450" MouseDoubleClick="Window_MouseDoubleClick">
+    <Canvas x:Name="MainCanvas" Background="Beige">
+        <Rectangle x:Name="Finish" Fill="Black" Height="6" Width="245" Canvas.Left="31" Canvas.Bottom="350" Opacity="10" Canvas.Top="79" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        <Ellipse x:Name="GreenLight" Fill="Green" Width="50" Height="50" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="10" Visibility="Hidden"/>
+        <Ellipse x:Name="RedLight" Fill="Red" Width="50" Height="50" HorizontalAlignment="Right" Canvas.Right="10" Canvas.Top="10" Visibility="Hidden"/>
+        <Ellipse x:Name="Player" Fill="Chocolate" Width="50" Height="50" Canvas.Bottom="30" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="135"/>
+        <Label x:Name="RoundTimer" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="141"/>
+        <Label x:Name="GameMessage" Content="Проиграл!" Canvas.Left="127" Canvas.Top="199" Visibility="Hidden"/>
+        <Button x:Name="NewGame" Content="Повторить" Canvas.Top="284" Canvas.Left="129" Visibility="Hidden" Click="NewGame_Click"/>
+        <Label Content="Кликай мышью, чтобы идти вперед" Canvas.Bottom="5" Canvas.Left="5"/>
+        <Label x:Name="LightMessage" Content="" Canvas.Top="30" Canvas.Left="135"/>
+    </Canvas>
+</Window>
